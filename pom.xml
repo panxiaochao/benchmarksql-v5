@@ -37,12 +37,17 @@
 		<!-- <dependency> -->
 		<!-- <groupId>org.apache.logging.log4j</groupId> -->
 		<!-- <artifactId>log4j-api</artifactId> -->
-		<!-- <version>2.14.1</version> -->
+		<!-- <version>2.19.0</version> -->
+		<!-- </dependency> -->
+		<!-- <dependency> -->
+		<!-- <groupId>org.apache.logging.log4j</groupId> -->
+		<!-- <artifactId>log4j</artifactId> -->
+		<!-- <version>2.19.0</version> -->
 		<!-- </dependency> -->
 		<!-- <dependency> -->
 		<!-- <groupId>org.apache.logging.log4j</groupId> -->
 		<!-- <artifactId>log4j-core</artifactId> -->
-		<!-- <version>2.14.1</version> -->
+		<!-- <version>2.19.0</version> -->
 		<!-- </dependency> -->
 
 		<!-- SAP ASE driver -->
@@ -139,7 +144,7 @@
 				<artifactId>maven-jar-plugin</artifactId>
 				<version>2.4</version>
 				<configuration>
-					<finalName>BenchmarkSQL-v5-${project.version}</finalName>
+					<finalName>BenchmarkSQL-v5</finalName>
 				</configuration>
 			</plugin>
 

@@ -57,7 +57,7 @@ function setCP()
 	    cp="../lib/*"
 	    ;;
     esac
-    myCP="./:../BenchmarkSQL*.jar:${cp}"
+    myCP="./:../BenchmarkSQL-v5.jar:${cp}"
     export myCP
 }
 
