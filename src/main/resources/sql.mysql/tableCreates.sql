@@ -57,10 +57,7 @@ create table bmsql_customer (
   key bmsql_customer_idx1 (c_w_id, c_d_id, c_last, c_first)
 );
 
--- create sequence bmsql_hist_id_seq;
-
 create table bmsql_history (
-  hist_id  integer not null auto_increment  primary key,
   h_c_id   integer,
   h_c_d_id integer,
   h_c_w_id integer,

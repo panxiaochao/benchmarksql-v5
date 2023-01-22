@@ -96,6 +96,7 @@ public class jTPCC implements jTPCCConfig {
 		log.info("Term-00,  (c) 2003, Raul Barbosa");
 		log.info("Term-00,  (c) 2004-2016, Denis Lussier");
 		log.info("Term-00,  (c) 2016, Jan Wieck");
+		log.info("Term-00,  (c) 2023, Sean He");
 		log.info(
 				"Term-00, +-------------------------------------------------------------+");
 		log.info("Term-00, ");
