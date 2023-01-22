@@ -144,6 +144,8 @@ public class jTPCC implements jTPCCConfig {
 			dbType = DB_POSTGRES;
 		else if (iDB.equals("mysql"))
 			dbType = DB_MYSQL;
+		else if (iDB.equals("ase"))
+			dbType = DB_ASE;
 		else {
 			log.error("unknown database type '" + iDB + "'");
 			return;
@@ -299,7 +301,14 @@ public class jTPCC implements jTPCCConfig {
 										+ "isc_tpb_no_rec_version,"
 										+ "isc_tpb_write," + "isc_tpb_wait");
 						break;
-
+					case DB_ASE :
+						/*
+						 * ASE need set extra initstring to avoid some expected
+						 * conversion issue.
+						 */
+						dbProps.setProperty("SQLINITSTRING",
+								"SET ARITHABORT NUMERIC_TRUNCATION OFF SET ANSINULL ON SET ARITHABORT ARITH_OVERFLOW OFF SET STRING_RTRUNCATION ON");
+						break;
 					default :
 						break;
 				}

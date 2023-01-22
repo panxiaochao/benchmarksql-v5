@@ -199,6 +199,7 @@ public class jTPCCConnection {
 		switch (dbType) {
 			case jTPCCConfig.DB_POSTGRES :
 			case jTPCCConfig.DB_MYSQL :
+			case jTPCCConfig.DB_ASE :
 				stmtStockLevelSelectLow = dbConn
 						.prepareStatement("SELECT count(*) AS low_stock FROM ("
 								+ "    SELECT s_w_id, s_i_id, s_quantity "
