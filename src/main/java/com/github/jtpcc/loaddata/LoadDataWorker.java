@@ -127,7 +127,7 @@ public class LoadDataWorker implements Runnable {
 		stmtHistory = dbConn.prepareStatement("INSERT INTO bmsql_history ("
 				+ "  h_c_id, h_c_d_id, h_c_w_id, h_d_id, h_w_id, "
 				+ "  h_date, h_amount, h_data) "
-				+ "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
+				+ "VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
 		stmtOrder = dbConn.prepareStatement("INSERT INTO bmsql_oorder ("
 				+ "  o_w_id, o_d_id, o_id, o_c_id, "
 				+ "  o_carrier_id, o_ol_cnt, o_all_local, o_entry_d) "
