@@ -17,6 +17,3 @@ drop table bmsql_item;
 drop table bmsql_district;
 
 drop table bmsql_warehouse;
-
-drop sequence bmsql_hist_id_seq;
-
