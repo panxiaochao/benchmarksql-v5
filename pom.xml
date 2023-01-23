@@ -54,7 +54,7 @@
 		<dependency>
 			<groupId>com.sybase.jdbc4</groupId>
 			<artifactId>jconn4</artifactId>
-			<version>16.0.03.12.30318</version>
+			<version>16.0.03.11.30030</version>
 			<!-- 16.0.03.12.30318 16.0.03.11.30030 16.0.03.10.29843 16.0.03.09.29377 
 				16.0.03.07.28836 7.07.138.26368 7.07.141.28795 -->
 		</dependency>

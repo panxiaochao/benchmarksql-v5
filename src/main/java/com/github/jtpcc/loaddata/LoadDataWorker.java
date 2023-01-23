@@ -1,8 +1,9 @@
 /*
  * LoadDataWorker - Class to load one Warehouse (or in a special case the ITEM table).
  *
- * Copyright (C) 2016, Denis Lussier Copyright (C) 2016, Jan Wieck
- *
+ * Copyright (C) 2016, Denis Lussier 
+ * Copyright (C) 2016, Jan Wieck 
+ * Copyright (C) 2023, Sean He
  */
 
 package com.github.jtpcc.loaddata;
@@ -168,6 +169,7 @@ public class LoadDataWorker implements Runnable {
       if (!writeCSV)
         dbConn.close();
     } catch (SQLException se) {
+      se.printStackTrace();
       while (se != null) {
         fmt.format("Worker %03d: ERROR: %s", worker, se.getMessage());
         System.err.println(sb.toString());
