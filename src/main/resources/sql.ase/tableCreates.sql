@@ -48,7 +48,7 @@ create table bmsql_customer (
   c_state        char(2) null,
   c_zip          char(9) null,
   c_phone        char(16) null,
-  c_since        timestamp null,
+  c_since        datetime null,
   c_middle       char(2) null,
   c_data         varchar(500)
 );
@@ -59,7 +59,7 @@ create table bmsql_history (
   h_c_w_id integer null,
   h_d_id   integer null,
   h_w_id   integer null,
-  h_date   timestamp null,
+  h_date   datetime null,
   h_amount decimal(6,2) null,
   h_data   varchar(24) null
 );
@@ -78,7 +78,7 @@ create table bmsql_oorder (
   o_carrier_id integer null,
   o_ol_cnt     integer null,
   o_all_local  integer null,
-  o_entry_d    timestamp null
+  o_entry_d    datetime null
 );
 
 create table bmsql_order_line (
@@ -87,7 +87,7 @@ create table bmsql_order_line (
   ol_o_id         integer   not null,
   ol_number       integer   not null,
   ol_i_id         integer   not null,
-  ol_delivery_d   timestamp null,
+  ol_delivery_d   datetime null,
   ol_amount       decimal(6,2) null,
   ol_supply_w_id  integer null,
   ol_quantity     integer null,
