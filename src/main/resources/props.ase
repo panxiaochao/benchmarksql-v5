@@ -1,3 +1,6 @@
+// You need enable SELECT FOR UPDATE by: sp_configure 'select for update', 1  in advance 
+// to run the case. Otherwise there will be lots of DUPLICATE KEY exception when inserting orders.
+
 db=ase
 driver=com.sybase.jdbc4.jdbc.SybDriver
 application=Generic
@@ -31,7 +34,7 @@ stockLevelWeight=4
 // Directory name to create for collecting detailed result data.
 // Comment this out to suppress.
 resultDirectory=my_result_%tY-%tm-%td_%tH%tM%tS
-osCollectorScript=./misc/os_collector_linux.py
-osCollectorInterval=1
+//osCollectorScript=./misc/os_collector_linux.py
+//osCollectorInterval=1
 //osCollectorSSHAddr=user@dbhost
-osCollectorDevices=net_eth0 blk_sda
+//osCollectorDevices=net_eth0 blk_sda
