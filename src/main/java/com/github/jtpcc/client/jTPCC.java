@@ -139,6 +139,12 @@ public class jTPCC implements jTPCCConfig {
       dbType = DB_HANA;
     else if (iDB.equals("hana-col"))
       dbType = DB_HANA_COL;
+    else if (iDB.equals("mariadb"))
+      dbType = DB_MARIADB;
+    else if (iDB.equals("transact-sql"))
+      dbType = DB_TSQL;
+    else if (iDB.equals("db2"))
+      dbType = DB_DB2;
     else {
       log.error("unknown database type '" + iDB + "'");
       return;

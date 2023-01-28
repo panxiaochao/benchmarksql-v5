@@ -56,6 +56,9 @@ function setCP()
 	babelfish)
 	    cp="../lib/*"
 	    ;;
+	db2)
+	    cp="../lib/*"
+	    ;;
     esac
     myCP="./:../BenchmarkSQL-v5.jar:${cp}"
     export myCP
@@ -66,7 +69,7 @@ function setCP()
 # is a database, we support.
 # ----
 case "$(getProp db)" in
-    oracle|postgres|firebird|mariadb|transact-sql|babelfish|ase|hana)
+    oracle|postgres|firebird|mariadb|transact-sql|babelfish|ase|hana|hana-col|babelfish|db2)
 	;;
     "")	echo "ERROR: missing db= config option in ${PROPS}" >&2
 	exit 1

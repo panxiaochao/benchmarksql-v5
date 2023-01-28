@@ -6,7 +6,7 @@
  * Copyright (C) 2023, Sean He
  */
 
-package com.github.jtpcc.loaddata;
+package com.github.jtpcc.loader;
 
 import java.io.IOException;
 import java.sql.Connection;

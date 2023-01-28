@@ -1,4 +1,4 @@
-package com.github.jtpcc.loaddata;
+package com.github.jtpcc.loader;
 
 public class LoadJob {
   public static final int LOAD_ITEM = 1;

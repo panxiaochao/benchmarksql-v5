@@ -7,7 +7,7 @@
  *
  */
 
-package com.github.jtpcc.loaddata;
+package com.github.jtpcc.loader;
 
 import java.io.BufferedWriter;
 import java.io.FileInputStream;

@@ -179,6 +179,10 @@ public class jTPCCConnection implements jTPCCConfig {
       case jTPCCConfig.DB_ASE:
       case jTPCCConfig.DB_HANA:
       case jTPCCConfig.DB_HANA_COL:
+      case jTPCCConfig.DB_BABELFISH:
+      case jTPCCConfig.DB_TSQL:
+      case jTPCCConfig.DB_MARIADB:
+      case jTPCCConfig.DB_DB2:
         stmtStockLevelSelectLow = dbConn.prepareStatement("SELECT count(*) AS low_stock FROM ("
             + "    SELECT s_w_id, s_i_id, s_quantity " + "        FROM bmsql_stock "
             + "        WHERE s_w_id = ? AND s_quantity < ? AND s_i_id IN ("
@@ -209,7 +213,7 @@ public class jTPCCConnection implements jTPCCConfig {
  // PreparedStatements for DELIVERY_BG
     if (dbType == DB_ASE) {
       stmtDeliveryBGSelectOldestNewOrder = dbConn.prepareStatement(
-          "SELECT no_o_id " + "    FROM bmsql_new_order " + "    WHERE no_w_id = ? AND no_d_id = ? "
+          "SELECT top 1 no_o_id " + "    FROM bmsql_new_order " + "    WHERE no_w_id = ? AND no_d_id = ? "
               + "    ORDER BY no_o_id ASC");
       
       stmtDeliveryBGDeleteOldestNewOrder = dbConn.prepareStatement("DELETE FROM bmsql_new_order "

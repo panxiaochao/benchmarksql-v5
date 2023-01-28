@@ -9,7 +9,7 @@
 	<description>BenchmarkSQL is a TPC-C fair-use implementation.</description>
 
 	<!-- TODO To change when this project use github pages -->
-	<url>https://github.com/pgsql-io/benchmarksql</url>
+	<url>https://github.com/iihero/benchmarksql-v5</url>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -229,6 +229,10 @@
 			<id>smartin3</id>
 			<name>Scott Martin</name>
 		</developer>
+		<developer>
+			<id>iihero</id>
+			<name>Sean He</name>
+		</developer>
 	</developers>
 	<contributors>
 		<contributor>
@@ -247,6 +251,17 @@
 			<url>https://github.com/romansimakov</url>
 			<properties>
 				<picUrl>https://avatars.githubusercontent.com/u/1625002?v=4</picUrl>
+			</properties>
+		</contributor>
+		<contributor>
+			<name>Sean He</name>
+			<url>https://github.com/iihero</url>
+			<roles>
+				<role>developer</role>
+			</roles>
+			<timezone>Asia/Shanghai</timezone>
+			<properties>
+				<picUrl></picUrl>
 			</properties>
 		</contributor>
 	</contributors>

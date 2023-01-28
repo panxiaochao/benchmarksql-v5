@@ -4,7 +4,7 @@ Instructions for running BenchmarkSQL on PostgreSQL
 
 0. Requirements
 
-    Use of JDK7 is required.
+    Use of JDK8 is required.
 
 1. Create the benchmarksql user and a database
 
@@ -28,20 +28,7 @@ Instructions for running BenchmarkSQL on PostgreSQL
     command to compile the code.
 
     [wieck@localhost ~] $ cd benchmarksql
-    [wieck@localhost benchmarksql] $ ant
-    Buildfile: /nas1/home/wieck/benchmarksql.git/build.xml
-
-    init:
-        [mkdir] Created dir: /home/wieck/benchmarksql/build
-
-    compile:
-	[javac] Compiling 11 source files to /home/wieck/benchmarksql/build
-
-    dist:
-	[mkdir] Created dir: /home/wieck/benchmarksql/dist
-	  [jar] Building jar: /home/wieck/benchmarksql/dist/BenchmarkSQL-5.0.jar
-    BUILD SUCCESSFUL
-    Total time: 1 second
+    [wieck@localhost benchmarksql] $ mvn package
     [wieck@localhost benchmarksql] $
 
 3. Create the benchmark configuration file

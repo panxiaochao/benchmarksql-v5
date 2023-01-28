@@ -10,4 +10,4 @@ shift
 
 setCP || exit 1
 
-java -cp "$myCP" -Dprop=$PROPS com.github.jtpcc.loaddata.LoadData $*
+java -cp "$myCP" -Dprop=$PROPS com.github.jtpcc.loader.LoadData $*

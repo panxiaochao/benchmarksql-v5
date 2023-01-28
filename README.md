@@ -3,6 +3,11 @@ BENCHMARKSQL README
 
 CHANGE LOG:
 -----------
+Version 5.10 Sean He (iihero):
+--------------------------------------
++ Use Maven instead of Ant for the build. Easy to maintain.
++ Upgrade all the jdbc drivers to the latest version.
++ Add support for ASE, HANA, HANA-COL, MSSQL(TSQL), DB2
 
 Version 5.0 lussman & jannicash:
 --------------------------------------
