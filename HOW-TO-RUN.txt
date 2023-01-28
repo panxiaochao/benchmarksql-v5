@@ -24,7 +24,7 @@ Instructions for running BenchmarkSQL on PostgreSQL
 
     As your own UNIX user change into the toplevel directory of the
     benchmarksql git repository checkout or the directory that was
-    created by unpacking the release tarball/zipfile. Use the ant
+    created by unpacking the release tarball/zipfile. Use the mvn
     command to compile the code.
 
     [wieck@localhost ~] $ cd benchmarksql
