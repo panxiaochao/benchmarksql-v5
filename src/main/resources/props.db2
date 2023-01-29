@@ -1,5 +1,5 @@
 db=db2
-driver=com.ibm.db2.jcc.DB2Driver 
+driver=com.ibm.db2.jcc.DB2Driver
 conn=jdbc:db2://localhost:50000/benchmarksql1
 user=benchmarksql
 password=PWbmsql
