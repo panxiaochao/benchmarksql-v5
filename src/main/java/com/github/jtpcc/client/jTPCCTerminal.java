@@ -10,7 +10,6 @@ package com.github.jtpcc.client;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.sql.Connection;
-import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import org.apache.log4j.Logger;
@@ -22,7 +21,6 @@ public class jTPCCTerminal implements jTPCCConfig, Runnable {
   private Connection conn = null;
   private Statement stmt = null;
   private Statement stmt1 = null;
-  private ResultSet rs = null;
   private int terminalWarehouseID, terminalDistrictID;
   private boolean terminalWarehouseFixed;
   private int paymentWeight, orderStatusWeight, deliveryWeight, stockLevelWeight,
@@ -34,9 +32,6 @@ public class jTPCCTerminal implements jTPCCConfig, Runnable {
   private int numTransactions;
   private int numWarehouses;
   private int newOrderCounter;
-  private long totalTnxs = 1;
-  private StringBuffer query = null;
-  private int result = 0;
   private boolean stopRunningSignal = false;
 
   long terminalStartTime = 0;
@@ -88,6 +83,7 @@ public class jTPCCTerminal implements jTPCCConfig, Runnable {
       printMessage("Closing statement and connection...");
 
       stmt.close();
+      stmt1.close();
       conn.close();
     } catch (Exception e) {
       printMessage("");
