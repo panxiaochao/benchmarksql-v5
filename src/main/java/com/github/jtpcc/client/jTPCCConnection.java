@@ -71,6 +71,16 @@ public class jTPCCConnection implements jTPCCConfig {
         stmtNewOrderSelectStockBatch[i] = dbConn.prepareStatement(stmtStr);
         st += " OR (s_w_id = ? AND s_i_id = ?)";
       }
+    } else if (dbType == DB_TSQL) {
+      st = "SELECT s_i_id, s_w_id, s_quantity, s_data, "
+          + "       s_dist_01, s_dist_02, s_dist_03, s_dist_04, "
+          + "       s_dist_05, s_dist_06, s_dist_07, s_dist_08, " + "       s_dist_09, s_dist_10 "
+          + "    FROM bmsql_stock  WITH (UPDLOCK) " + " WHERE (s_w_id, s_i_id) in ((?,?)";
+      for (int i = 1; i <= 15; i++) {
+        String stmtStr = st + ") ";
+        stmtNewOrderSelectStockBatch[i] = dbConn.prepareStatement(stmtStr);
+        st += ",(?,?)";
+      }
     } else {
       st = "SELECT s_i_id, s_w_id, s_quantity, s_data, "
           + "       s_dist_01, s_dist_02, s_dist_03, s_dist_04, "
