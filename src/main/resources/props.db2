@@ -1,6 +1,6 @@
 db=db2
 driver=com.ibm.db2.jcc.DB2Driver
-conn=jdbc:db2://localhost:50000/benchmarksql1
+conn=jdbc:db2://localhost:50000/benchmarksql1:currentSchema=bmsql
 user=benchmarksql
 password=PWbmsql
 
@@ -30,7 +30,7 @@ stockLevelWeight=4
 // Directory name to create for collecting detailed result data.
 // Comment this out to suppress.
 resultDirectory=my_result_%tY-%tm-%td_%tH%tM%tS
-osCollectorScript=./misc/os_collector_linux.py
-osCollectorInterval=1
+//osCollectorScript=./misc/os_collector_linux.py
+//osCollectorInterval=1
 //osCollectorSSHAddr=user@dbhost
-osCollectorDevices=net_eth0 blk_sda
+//osCollectorDevices=net_eth0 blk_sda
