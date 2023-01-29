@@ -75,11 +75,11 @@ public class jTPCCConnection implements jTPCCConfig {
       st = "SELECT s_i_id, s_w_id, s_quantity, s_data, "
           + "       s_dist_01, s_dist_02, s_dist_03, s_dist_04, "
           + "       s_dist_05, s_dist_06, s_dist_07, s_dist_08, " + "       s_dist_09, s_dist_10 "
-          + "    FROM bmsql_stock  WITH (UPDLOCK) " + " WHERE (s_w_id, s_i_id) in ((?,?)";
+          + "    FROM bmsql_stock  WITH (UPDLOCK) " + " WHERE (s_w_id = ? AND s_i_id = ?)";
       for (int i = 1; i <= 15; i++) {
-        String stmtStr = st + ") ";
+        String stmtStr = st + " ";
         stmtNewOrderSelectStockBatch[i] = dbConn.prepareStatement(stmtStr);
-        st += ",(?,?)";
+        st += " OR (s_w_id = ? AND s_i_id = ?)";
       }
     } else {
       st = "SELECT s_i_id, s_w_id, s_quantity, s_data, "
@@ -217,7 +217,7 @@ public class jTPCCConnection implements jTPCCConfig {
     stmtOrderStatusSelectLastOrder = dbConn.prepareStatement("SELECT o_id, o_entry_d, o_carrier_id "
         + "    FROM bmsql_oorder " + "    WHERE o_w_id = ? AND o_d_id = ? AND o_c_id = ? "
         + "      ORDER BY o_id DESC LIMIT 1");
-    if (dbType == DB_ASE) {
+    if (dbType == DB_ASE || dbType == DB_TSQL) {
       stmtOrderStatusSelectLastOrder = dbConn.prepareStatement("SELECT TOP 1 o_id, o_entry_d, o_carrier_id "
           + "  FROM bmsql_oorder " + "    WHERE o_w_id = ? AND o_d_id = ? AND o_c_id = ? "
           + "  ORDER BY o_id");
@@ -267,7 +267,7 @@ public class jTPCCConnection implements jTPCCConfig {
 
     // ASE doesn't support multi-column IN as the condition
  // PreparedStatements for DELIVERY_BG
-    if (dbType == DB_ASE) {
+    if (dbType == DB_ASE || dbType == DB_TSQL) {
       stmtDeliveryBGSelectOldestNewOrder = dbConn.prepareStatement(
           "SELECT top 1 no_o_id " + "    FROM bmsql_new_order " + "    WHERE no_w_id = ? AND no_d_id = ? "
               + "    ORDER BY no_o_id ASC");
@@ -322,7 +322,6 @@ public class jTPCCConnection implements jTPCCConfig {
           + " OR (ol_w_id=? AND ol_d_id=? AND ol_o_id=?) OR (ol_w_id=? AND ol_d_id=? AND ol_o_id=?)"
           );
     } else {
-      
       stmtDeliveryBGSelectOldestNewOrder = dbConn.prepareStatement(
           "SELECT no_o_id " + "    FROM bmsql_new_order " + "    WHERE no_w_id = ? AND no_d_id = ? "
               + "    ORDER BY no_o_id ASC" + "    LIMIT 1" + "    FOR UPDATE");
