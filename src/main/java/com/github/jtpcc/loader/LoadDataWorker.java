@@ -1,8 +1,8 @@
 /*
  * LoadDataWorker - Class to load one Warehouse (or in a special case the ITEM table).
  *
- * Copyright (C) 2016, Denis Lussier 
- * Copyright (C) 2016, Jan Wieck 
+ * Copyright (C) 2016, Denis Lussier
+ * Copyright (C) 2016, Jan Wieck
  * Copyright (C) 2023, Sean He
  */
 

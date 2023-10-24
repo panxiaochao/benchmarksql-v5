@@ -50,21 +50,6 @@
 		<!-- <version>2.19.0</version> -->
 		<!-- </dependency> -->
 
-		<!-- SAP ASE driver -->
-		<dependency>
-			<groupId>com.sybase.jdbc4</groupId>
-			<artifactId>jconn4</artifactId>
-			<version>16.0.03.11.30030</version>
-			<!-- 16.0.03.12.30318 16.0.03.11.30030 16.0.03.10.29843 16.0.03.09.29377 
-				16.0.03.07.28836 7.07.138.26368 7.07.141.28795 -->
-		</dependency>
-
-		<!-- SAP Hana driver -->
-		<dependency>
-			<groupId>com.sap.db.jdbc</groupId>
-			<artifactId>ngdbc</artifactId>
-			<version>2.15.10</version>
-		</dependency>
 
 		<!-- Postgres driver -->
 		<!-- Depending the Java version, it could use a different version. -->
@@ -181,88 +166,4 @@
 
 		</plugins>
 	</build>
-
-	<organization>
-		<name>PGSQL</name>
-		<url>https://pgsql.io/</url>
-	</organization>
-	<!-- TODO Travis - -> <ciManagement> <system>Travis-CI</system> <url>https://travis-ci.com/github/ECI-SGBD/BenchmarkSQL-4</url> 
-		</ciManagement -->
-	<issueManagement>
-		<url>https://github.com/pgsql-io/benchmarksql/issues</url>
-		<system>GitHub</system>
-	</issueManagement>
-	<scm>
-		<url>https://github.com/pgsql-io/benchmarksql</url>
-	</scm>
-	<developers>
-		<developer>
-			<id>jannicash</id>
-			<name>Jan Wieck</name>
-			<url>https://github.com/wieck</url>
-			<roles>
-				<role>architect</role>
-				<role>developer</role>
-			</roles>
-			<timezone>America/New_York</timezone>
-			<properties>
-				<picUrl>https://avatars.githubusercontent.com/u/362674?v=4</picUrl>
-			</properties>
-		</developer>
-		<developer>
-			<id>lussman</id>
-			<name>Denis Lussier</name>
-			<url>https://github.com/luss</url>
-			<roles>
-				<role>architect</role>
-				<role>developer</role>
-			</roles>
-			<properties>
-				<picUrl>https://avatars.githubusercontent.com/u/1664798?v=4</picUrl>
-			</properties>
-		</developer>
-		<developer>
-			<id>cadym</id>
-			<name>Cady</name>
-		</developer>
-		<developer>
-			<id>smartin3</id>
-			<name>Scott Martin</name>
-		</developer>
-		<developer>
-			<id>iihero</id>
-			<name>Sean He</name>
-		</developer>
-	</developers>
-	<contributors>
-		<contributor>
-			<name>Andres Gomez - angoca</name>
-			<url>https://github.com/angoca</url>
-			<roles>
-				<role>developer</role>
-			</roles>
-			<timezone>America/Bogota</timezone>
-			<properties>
-				<picUrl>https://avatars.githubusercontent.com/u/294317?v=4</picUrl>
-			</properties>
-		</contributor>
-		<contributor>
-			<name>Roman Simakov - romansimakov</name>
-			<url>https://github.com/romansimakov</url>
-			<properties>
-				<picUrl>https://avatars.githubusercontent.com/u/1625002?v=4</picUrl>
-			</properties>
-		</contributor>
-		<contributor>
-			<name>Sean He</name>
-			<url>https://github.com/iihero</url>
-			<roles>
-				<role>developer</role>
-			</roles>
-			<timezone>Asia/Shanghai</timezone>
-			<properties>
-				<picUrl></picUrl>
-			</properties>
-		</contributor>
-	</contributors>
 </project>

@@ -2,7 +2,7 @@
  * LoadData - Load Sample Data directly into database tables or into CSV files using multiple
  * parallel workers.
  *
- * Copyright (C) 2016, Denis Lussier 
+ * Copyright (C) 2016, Denis Lussier
  * Copyright (C) 2016, Jan Wieck
  *
  */
