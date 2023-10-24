@@ -1,14 +1,15 @@
 db=kingbase
 driver=com.kingbase8.Driver
-conn=jdbc:kingbase8://localhost:54321/xxx
+conn=jdbc:kingbase8://127.0.0.1:54321/benchmarksql
 user=system
 password=system
+schema=kb_test
 
 warehouses=1
-loadWorkers=4
+loadWorkers=6
 terminals=1
 runTxnsPerTerminal=0
-runMins=10
+runMins=1
 limitTxnsPerMin=0
 terminalWarehouseFixed=true
 newOrderWeight=45
@@ -19,5 +20,4 @@ stockLevelWeight=4
 resultDirectory=kingbase_%tY-%tm-%td_%tH_%tM_%tS
 osCollectorScript=./misc/os_collector_linux.py
 osCollectorInterval=1
-//osCollectorSSHAddr=user@dbhost
-//osCollectorDevices=net_eth0 blk_sda
+osCollectorDevices=net_eth0 blk_vdb

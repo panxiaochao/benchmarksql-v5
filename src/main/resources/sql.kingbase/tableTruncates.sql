@@ -1,0 +1,10 @@
+truncate table kb_test.bmsql_warehouse;
+truncate table kb_test.bmsql_item;
+truncate table kb_test.bmsql_stock;
+truncate table kb_test.bmsql_district;
+truncate table kb_test.bmsql_customer;
+truncate table kb_test.bmsql_history;
+truncate table kb_test.bmsql_oorder;
+truncate table kb_test.bmsql_order_line;
+truncate table kb_test.bmsql_new_order;
+truncate table kb_test.bmsql_config;

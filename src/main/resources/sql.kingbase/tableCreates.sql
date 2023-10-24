@@ -1,9 +1,9 @@
-create table bmsql_config (
+create table kb_test.bmsql_config (
   cfg_name    varchar(30) primary key,
   cfg_value   varchar(50)
 );
 
-create table bmsql_warehouse (
+create table kb_test.bmsql_warehouse (
   w_id        integer   not null,
   w_ytd       decimal(12,2),
   w_tax       decimal(4,4),
@@ -15,7 +15,7 @@ create table bmsql_warehouse (
   w_zip       char(9)
 );
 
-create table bmsql_district (
+create table kb_test.bmsql_district (
   d_w_id       integer       not null,
   d_id         integer       not null,
   d_ytd        decimal(12,2),
@@ -29,7 +29,7 @@ create table bmsql_district (
   d_zip        char(9)
 );
 
-create table bmsql_customer (
+create table kb_test.bmsql_customer (
   c_w_id         integer        not null,
   c_d_id         integer        not null,
   c_id           integer        not null,
@@ -53,7 +53,7 @@ create table bmsql_customer (
   c_data         varchar(500)
 );
 
-create table bmsql_history (
+create table kb_test.bmsql_history (
   h_c_id   integer,
   h_c_d_id integer,
   h_c_w_id integer,
@@ -64,13 +64,13 @@ create table bmsql_history (
   h_data   varchar(24)
 );
 
-create table bmsql_new_order (
+create table kb_test.bmsql_new_order (
   no_w_id  integer   not null,
   no_d_id  integer   not null,
   no_o_id  integer   not null
 );
 
-create table bmsql_oorder (
+create table kb_test.bmsql_oorder (
   o_w_id       integer      not null,
   o_d_id       integer      not null,
   o_id         integer      not null,
@@ -81,7 +81,7 @@ create table bmsql_oorder (
   o_entry_d    timestamp
 );
 
-create table bmsql_order_line (
+create table kb_test.bmsql_order_line (
   ol_w_id         integer   not null,
   ol_d_id         integer   not null,
   ol_o_id         integer   not null,
@@ -94,7 +94,7 @@ create table bmsql_order_line (
   ol_dist_info    char(24)
 );
 
-create table bmsql_item (
+create table kb_test.bmsql_item (
   i_id     integer      not null,
   i_name   varchar(24),
   i_price  decimal(5,2),
@@ -102,7 +102,7 @@ create table bmsql_item (
   i_im_id  integer
 );
 
-create table bmsql_stock (
+create table kb_test.bmsql_stock (
   s_w_id       integer       not null,
   s_i_id       integer       not null,
   s_quantity   integer,

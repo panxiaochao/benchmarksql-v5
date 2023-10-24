@@ -1,0 +1,10 @@
+drop table kb_test.bmsql_config;
+drop table kb_test.bmsql_new_order;
+drop table kb_test.bmsql_order_line;
+drop table kb_test.bmsql_oorder;
+drop table kb_test.bmsql_history;
+drop table kb_test.bmsql_customer;
+drop table kb_test.bmsql_stock;
+drop table kb_test.bmsql_item;
+drop table kb_test.bmsql_district;
+drop table kb_test.bmsql_warehouse;
