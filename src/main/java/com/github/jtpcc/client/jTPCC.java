@@ -120,27 +120,31 @@ public class jTPCC implements jTPCCConfig {
 
         log.info("Term-00, ");
 
-        if (iDB.equals("firebird"))
+        if (iDB.equals("firebird")) {
             dbType = DB_FIREBIRD;
-        else if (iDB.equals("oracle"))
+        } else if (iDB.equals("oracle")) {
             dbType = DB_ORACLE;
-        else if (iDB.equals("postgres"))
+        } else if (iDB.equals("postgres")) {
             dbType = DB_POSTGRES;
-        else if (iDB.equals("mysql"))
+        } else if (iDB.equals("mysql")) {
             dbType = DB_MYSQL;
-        else if (iDB.equals("ase"))
+        } else if (iDB.equals("ase")) {
             dbType = DB_ASE;
-        else if (iDB.equals("hana"))
+        } else if (iDB.equals("hana")) {
             dbType = DB_HANA;
-        else if (iDB.equals("hana-col"))
+        } else if (iDB.equals("hana-col")) {
             dbType = DB_HANA_COL;
-        else if (iDB.equals("mariadb"))
+        } else if (iDB.equals("mariadb")) {
             dbType = DB_MARIADB;
-        else if (iDB.equals("transact-sql"))
+        } else if (iDB.equals("transact-sql")) {
             dbType = DB_TSQL;
-        else if (iDB.equals("db2"))
+        } else if (iDB.equals("db2")) {
             dbType = DB_DB2;
-        else {
+        }
+        // 增加人大金仓
+        else if (iDB.equals("kingbase")) {
+            dbType = DB_KINGBASE;
+        } else {
             log.error("unknown database type '" + iDB + "'");
             return;
         }

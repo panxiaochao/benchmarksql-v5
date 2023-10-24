@@ -1,0 +1,23 @@
+db=kingbase
+driver=com.kingbase8.Driver
+conn=jdbc:kingbase8://localhost:54321/xxx
+user=system
+password=system
+
+warehouses=1
+loadWorkers=4
+terminals=1
+runTxnsPerTerminal=0
+runMins=10
+limitTxnsPerMin=0
+terminalWarehouseFixed=true
+newOrderWeight=45
+paymentWeight=43
+orderStatusWeight=4
+deliveryWeight=4
+stockLevelWeight=4
+resultDirectory=kingbase_%tY-%tm-%td_%tH_%tM_%tS
+osCollectorScript=./misc/os_collector_linux.py
+osCollectorInterval=1
+//osCollectorSSHAddr=user@dbhost
+//osCollectorDevices=net_eth0 blk_sda

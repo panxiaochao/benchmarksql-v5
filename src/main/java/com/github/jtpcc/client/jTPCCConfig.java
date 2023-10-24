@@ -23,7 +23,8 @@ public interface jTPCCConfig {
             DB_HANA = 8, //
             DB_HANA_COL = 9, //
             DB_MARIADB = 10, //
-            DB_DB2 = 11;//
+            DB_DB2 = 11,
+            DB_KINGBASE = 12;//
 
     int NEW_ORDER = 1, PAYMENT = 2, ORDER_STATUS = 3, DELIVERY = 4, STOCK_LEVEL = 5;
 

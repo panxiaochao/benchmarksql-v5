@@ -35,6 +35,9 @@ function setCP()
 	postgres)
 	    cp="../lib/*"
 	    ;;
+	mysql)
+    	cp="../lib/*"
+    	;;
 	firebird)
 	    cp="../lib/*"
 	    ;;
@@ -59,6 +62,9 @@ function setCP()
 	db2)
 	    cp="../lib/*"
 	    ;;
+	kingbase)
+  	  cp="../lib/*"
+  	  ;;
     esac
     myCP="./:../BenchmarkSQL-v5.jar:${cp}"
     export myCP
@@ -69,7 +75,7 @@ function setCP()
 # is a database, we support.
 # ----
 case "$(getProp db)" in
-    oracle|postgres|firebird|mariadb|transact-sql|babelfish|ase|hana|hana-col|babelfish|db2)
+    oracle|postgres|mysql|firebird|mariadb|transact-sql|babelfish|ase|hana|hana-col|babelfish|db2|kingbase)
 	;;
     "")	echo "ERROR: missing db= config option in ${PROPS}" >&2
 	exit 1
