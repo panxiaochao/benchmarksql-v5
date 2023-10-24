@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.github.jtpcc</groupId>
 	<artifactId>benchmarksql-v5</artifactId>
-	<version>5.1.0-SNAPSHOT</version>
+	<version>5.1.1</version>
 	<name>A TPC-C like test tool</name>
 	<description>BenchmarkSQL is a TPC-C fair-use implementation.</description>
 
