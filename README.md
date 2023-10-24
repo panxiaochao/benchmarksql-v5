@@ -3,6 +3,11 @@ BENCHMARKSQL README
 
 CHANGE LOG:
 -----------
+Version 5.11 Lypxc :
+--------------------------------------
++ 新增人大金仓支持
++ 优化mysql创建语句
+
 Version 5.10 Sean He (iihero):
 --------------------------------------
 + Use Maven instead of Ant for the build. Easy to maintain.
